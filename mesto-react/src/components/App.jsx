@@ -40,7 +40,7 @@ function App() {
   };
 
   return (
-    <div className="page">
+    <body className="page">
       <Header />
       <Main
       onEditAvatar={handleEditAvatarClick}
@@ -125,7 +125,7 @@ function App() {
       buttonText='Да'
       isOpen={isConfirmationPopupOpen}
       onClose={closeAllPops}/>
-    </div>
+    </body>
   )
 }
 

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import {api} from '../utils/api'
+import api from '../utils/api'
 import Card from './Card'
 
 function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick }) {
@@ -20,19 +20,20 @@ function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick }) {
   }, [])
 
   return (
-    <main className='page'>
+    <main className='main'>
       <section className="profile">
       <div className="profile__info">
         <img
           src={userAvatar}
           alt="аватар"
           className="profile__image"
+          onClick={onEditAvatar}
         />
-        <button
+        {/* <button
         className='profile__edit-avatar'
         type='button'
         aria-label="Изменить аватар"
-        onClick={onEditAvatar}></button>
+        onClick={onEditAvatar}></button> */}
         <div className="profile__column">
           <h1 className="profile__name">{userName}</h1>
           <button className="profile__button-edit" type="button" onClick={onEditProfile}></button>
