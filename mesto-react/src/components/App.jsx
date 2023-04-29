@@ -31,7 +31,7 @@ function App() {
     setIsImagePopupOpen(true);
   }
   
-  function closeAllPops() {
+  function closeAllPopups() {
     setIsEditProfileOpen(false);
     setIsAddPlacePopupOpen(false);
     setIsEditAvatarPopupOpen(false);
@@ -55,7 +55,7 @@ function App() {
       title='Изменить аватар'
       buttonText='Сохранить'
       isOpen={isEditAvatarPopupOpen}
-      onClose={closeAllPops}
+      onClose={closeAllPopups}
       >
         <input className="popup__input popup__input_type_link"
         name="avatar"
@@ -71,7 +71,7 @@ function App() {
         title='Редактировать профиль'
         buttonText='Сохранить'
         isOpen={isEditProfileOpen}
-        onClose={closeAllPops}>
+        onClose={closeAllPopups}>
           <input 
           className="popup__input popup__input_type_title"
           type="text"
@@ -95,7 +95,7 @@ function App() {
       title='Новое место'
       buttonText='Добавить'
       isOpen={isAddPlacePopupOpen}
-      onClose={closeAllPops}>
+      onClose={closeAllPopups}>
         <input className="popup__input popup__input_type_title"
         type="text"
         name="cardname"
@@ -117,14 +117,14 @@ function App() {
       <ImagePopup
       card={selecetedCard}
       isOpen={isImagePopupOpen}
-      onClose={closeAllPops} />
+      onClose={closeAllPopups} />
 
       {/* Confirmation popup */}
       <PopupWithForm
       title='Вы уверены?'
       buttonText='Да'
       isOpen={isConfirmationPopupOpen}
-      onClose={closeAllPops}/>
+      onClose={closeAllPopups}/>
     </body>
   )
 }

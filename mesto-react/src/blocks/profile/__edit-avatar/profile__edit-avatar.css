@@ -1,0 +1,26 @@
+.profile__edit-avatar {
+  display: block;
+  border: none;
+  position: relative;
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent;
+  }
+  
+  .profile__edit-avatar::before {
+    opacity: 0;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    aspect-ratio: 1/1;
+    background: var(--color-main-80) url("../../../images/edit-avatar.svg") center/26px 26px no-repeat;
+    transition: 1s opacity ease-out;
+    border-radius: 50%;
+  }
+  
+  .profile__edit-avatar::before{
+    opacity: 1;
+  }
