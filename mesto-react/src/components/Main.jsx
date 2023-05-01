@@ -21,29 +21,34 @@ function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick }) {
 
   return (
     <main className="main">
-      <section className="profile">
-        <div className="profile__info">
+      <section class="profile">
+        <div class="profile__info">
+          <div class="profile__avatar-group">
+            <img src={userAvatar} alt="аватар" class="profile__image" />
             <button
               class="profile__edit-avatar"
               type="button"
               aria-label="Редактировать аватар"
               onClick={onEditAvatar}
-            >
-              <img src={userAvatar} alt="аватар" class="profile__image" />
-            </button>
+            ></button>
+          </div>
           <div class="profile__column">
             <div class="profile__name-button">
               <h1 class="profile__name">{userName}</h1>
-              <button class="profile__button-edit" type="button" onClick={onEditProfile}></button>
+              <button
+                class="profile__button-edit"
+                type="button"
+                onClick={onEditProfile}
+              ></button>
             </div>
             <p class="profile__bio">{userBio}</p>
           </div>
-          <button
-            className="profile__button-add"
-            type="button"
-            onClick={onAddPlace}
-          ></button>
         </div>
+        <button
+          class="profile__button-add"
+          type="button"
+          onClick={onAddPlace}
+        ></button>
       </section>
       <section className="cards">
         {cards.map((card) => (
