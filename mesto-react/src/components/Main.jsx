@@ -21,37 +21,39 @@ function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick }) {
 
   return (
     <main className="main">
-      <section class="profile">
-        <div class="profile__info">
-          <div class="profile__avatar-group">
-            <img src={userAvatar} alt="аватар" class="profile__image" />
+      <section className="profile">
+        <div className="profile__info">
+          <div className="profile__avatar-group">
+            <img src={userAvatar} alt="аватар" className="profile__image" />
             <button
-              class="profile__edit-avatar"
+              className="profile__edit-avatar"
               type="button"
               aria-label="Редактировать аватар"
               onClick={onEditAvatar}
             ></button>
           </div>
-          <div class="profile__column">
-            <div class="profile__name-button">
-              <h1 class="profile__name">{userName}</h1>
+          <div className="profile__column">
+            <div className="profile__name-button">
+              <h1 className="profile__name">{userName}</h1>
               <button
-                class="profile__button-edit"
+                className="profile__button-edit"
                 type="button"
+                aria-label="Редактировать профиль"
                 onClick={onEditProfile}
               ></button>
             </div>
-            <p class="profile__bio">{userBio}</p>
+            <p className="profile__bio">{userBio}</p>
           </div>
         </div>
         <button
           class="profile__button-add"
           type="button"
+          aria-label="Добавить место"
           onClick={onAddPlace}
         ></button>
       </section>
       <section className="cards">
-        {cards.map((card) => (
+        {cards.reverse().map((card) => (
           <Card card={card} onCardClick={onCardClick} key={card.id} />
         ))}
       </section>

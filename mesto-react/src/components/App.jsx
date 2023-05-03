@@ -78,7 +78,7 @@ function App() {
         <input
           className="popup__input popup__input_type_title"
           type="text"
-          name="name"
+          name="username"
           placeholder="Название карточки"
           minLength="2"
           maxLength="30"
@@ -86,10 +86,12 @@ function App() {
         />
         <span className="popup__error name-error"></span>
         <input
-          className="popup__input popup__input_type_link"
-          type="url"
-          name="link"
-          placeholder="Ссылка на картинку"
+          className="popup__input popup__input_type_bio"
+          type="text"
+          name="userbio"
+          minLength="1"
+          maxLength="30"
+          placeholder="Кем вы работаете?"
           required
         />
         <span className="popup__error link-error"></span>
@@ -133,6 +135,7 @@ function App() {
 
       {/* Confirmation popup */}
       <PopupWithForm
+        name='delete'
         title="Вы уверены?"
         buttonText="Да"
         isOpen={isConfirmationPopupOpen}
