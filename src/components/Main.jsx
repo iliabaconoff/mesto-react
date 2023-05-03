@@ -18,6 +18,7 @@ function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick }) {
       })
       .catch((err) => console.log(err));
   }, []);
+  
 
   return (
     <main className="main">
@@ -46,16 +47,17 @@ function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick }) {
           </div>
         </div>
         <button
-          class="profile__button-add"
+          className="profile__button-add"
           type="button"
           aria-label="Добавить место"
           onClick={onAddPlace}
         ></button>
       </section>
       <section className="cards">
-        {cards.reverse().map((card) => (
-          <Card card={card} onCardClick={onCardClick} key={card.id} />
-        ))}
+        {cards.reverse().map((card) => {
+          return(
+          <Card card={card} onCardClick={onCardClick} key={card._id} />
+        )})}
       </section>
     </main>
   );
