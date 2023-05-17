@@ -36,6 +36,7 @@ const EditProfilePopup = (props) => {
         placeholder="Ваше имя"
         minLength="2"
         maxLength="30"
+        value={name ?? ''}
         onChange={(evt) => setName(evt.target.value)}
         required
       />
@@ -47,6 +48,7 @@ const EditProfilePopup = (props) => {
         minLength="1"
         maxLength="30"
         placeholder="Кем вы работаете?"
+        value={description ?? ''}
         onChange={(evt) => setDescription(evt.target.value)}
         required
       />

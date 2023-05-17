@@ -48,7 +48,7 @@ const Card = (props) => {
             id="card__like"
             onClick={handleLikeClick}
           ></button>
-          <p className="card__like-counter">{props.likes.lenght}</p>
+          <span className="card__like-counter">{props.likes.length}</span>
         </div>
       </div>
     </div>

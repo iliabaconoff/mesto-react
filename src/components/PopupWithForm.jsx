@@ -13,8 +13,7 @@ function PopupWithForm({ name, title, children, isOpen, onClose, buttonText, ...
           method="post"
           name={name}
           onSubmit={props.onSubmit}
-          noValidate
-        >
+          >
           {children}
           <button className="popup__save" type="submit">
             {buttonText}
